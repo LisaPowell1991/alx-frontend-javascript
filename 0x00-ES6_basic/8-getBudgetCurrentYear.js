@@ -6,7 +6,6 @@ function getCurrentYear() {
 }
 
 export default function getBudgetForCurrentYear(income, gdp, capita) {
-  // eslint-disable-next-line no-unused-vars
   const currentYear = getCurrentYear();
 
   const budget = {
