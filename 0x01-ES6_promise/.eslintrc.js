@@ -1,4 +1,5 @@
 module.exports = {
+  'root': true,
   env: {
     browser: false,
     es6: true,
@@ -26,7 +27,7 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
