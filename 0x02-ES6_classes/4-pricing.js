@@ -34,7 +34,7 @@ export default class Pricing {
 
   // Method to display the full price
   displayFullPrice() {
-    return `${this._amount} ${this._currency.displayFullCurrency()}`;
+    return `${this._amount} ${this._currency.getName()} (${this._currency.getCode()})`;
   }
 
   // Static method to convert price
