@@ -4,30 +4,28 @@ export default class Currency {
     this._name = name;
   }
 
-  // getters
+  // getter and setter for code
   getCode() {
     return this._code;
   }
 
+  setCurrencyCode(newCode) {
+    if (typeof newCode !== 'string') {
+      throw new TypeError('code must be a string');
+    }
+    this._code = newCode;
+  }
+
+  // getter and setter for name
   getName() {
     return this._name;
   }
 
-  // setters
-  setCurrencyCode(code) {
-    if (typeof code === 'string') {
-      this._code = code;
-    } else {
-      throw new TypeError('Code must be a string');
-    }
-  }
-
-  setCurrencyName(name) {
-    if (typeof name === 'string') {
-      this._name = name;
-    } else {
+  setCurrencyName(newName) {
+    if (typeof newName !== 'string') {
       throw new TypeError('Name must be a string');
     }
+    this._name = newName;
   }
 
   // Method to display the full currency
