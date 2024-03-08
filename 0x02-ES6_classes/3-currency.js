@@ -5,11 +5,11 @@ export default class Currency {
   }
 
   // getter and setter for code
-  getCode() {
+  get Code() {
     return this._code;
   }
 
-  setCurrencyCode(newCode) {
+  set Code(newCode) {
     if (typeof newCode !== 'string') {
       throw new TypeError('code must be a string');
     }
@@ -17,11 +17,11 @@ export default class Currency {
   }
 
   // getter and setter for name
-  getName() {
+  get Name() {
     return this._name;
   }
 
-  setCurrencyName(newName) {
+  set Name(newName) {
     if (typeof newName !== 'string') {
       throw new TypeError('Name must be a string');
     }
