@@ -7,11 +7,11 @@ export default class Pricing {
   }
 
   // Getter and setter for amount
-  getAmount() {
+  get amount() {
     return this._amount;
   }
 
-  setAmount(newAmount) {
+  set amount(newAmount) {
     if (typeof newAmount !== 'number') {
       throw new TypeError('Amount must be a number');
     } else {
@@ -20,11 +20,11 @@ export default class Pricing {
   }
 
   // Getter and setter for currency
-  getCurrency() {
+  get currency() {
     return this._currency;
   }
 
-  setCurrency(newCurrency) {
+  set currency(newCurrency) {
     if (!(newCurrency instanceof Currency)) {
       throw new TypeError('Currency must be an instance of Currency');
     } else {
