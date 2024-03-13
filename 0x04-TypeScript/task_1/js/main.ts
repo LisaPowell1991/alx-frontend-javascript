@@ -17,12 +17,20 @@ interface Teacher {
     contract: true,
 };
 
-console.log(teacher);
- */
+console.log(teacher); */
+
+function printTeacher(firstName: string, lastName: string): string {
+    return `${firstName.charAt(0)}. ${lastName}`;
+}
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+// console.log(printTeacher('Jane', 'Doe'));
+
 interface Directors extends Teacher {
     numberOfReports: number;
 }
-const director: Directors = {
+/* const director: Directors = {
     firstName: 'Jane',
     lastName: 'Doe',
     fullTimeEmployee: true,
@@ -31,4 +39,26 @@ const director: Directors = {
     // adding a new boolean attribute
     contract: false,
 };
-console.log(director);
+console.log(director); */
+
+class StudentClass {
+    constructor(public firstName: string, public lastName: string) {}
+
+    workOnHomework() {
+        return 'Currently working';
+    }
+
+    displayName(): string {
+        return this.firstName;
+    }
+}
+interface StudentConstructor {
+    new(firstName: string, lastName: string): StudentClass;
+}
+
+interface StudentInterface {
+    firstName: string;
+    lastName: string;
+    workOnHomework(): string;
+    displayName(): string;
+}
